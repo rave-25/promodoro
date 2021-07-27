@@ -1,0 +1,129 @@
+.header {
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+  font-weight: 800 !important;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-input {
+  padding: 12px 20px 12px 8px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid rgba(20, 159, 255, 1);
+  outline: none;
+  background: transparent;
+  color: darkslategrey;
+}
+
+.todo-input::placeholder {
+  color: darkslategray;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgb(148, 194, 255) 100%
+  );
+  color: black;
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid #149fff;
+}
+
+.todo-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #000;
+  background: linear-gradient(
+    90deg,
+    rgb(245, 241, 237) 0%,
+    rgb(252, 145, 103) 100%
+  );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.todo-row:nth-child(4n + 1) {
+  background: linear-gradient(
+    90deg,
+    rgb(250, 247, 255) 0%,
+    rgb(133, 88, 168) 100%
+  );
+}
+
+.todo-row:nth-child(4n + 2) {
+  background: linear-gradient(
+    90deg,
+    rgb(247, 243, 246) 0%,
+    rgb(250, 166, 211) 100%
+  );
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: linear-gradient(90deg, #a3c9e4 0%, rgb(221, 234, 251) 100%);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: darkslategrey;
+}
+
+.edit-icon {
+  color: darkslategrey;
+}
+@media (max-width: 991px) {
+  .header {
+    font-size: 13px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+  }
+  .todo-input {
+    padding: 6px 10px 6px 4px;
+  }
+  .todo-form {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+  }
+  .todo-button {
+    padding: 4px 6px 3px 4px;
+    margin-top: 12px;
+  }
+}

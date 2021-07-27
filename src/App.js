@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container, Grid } from "@material-ui/core";
+import Pomodoro from "./pages/pomodoro/Pomodoro";
+
+import "./App.css";
+import TodoList from "./pages/Todo/TodoList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className={"top_margin"}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={12} md={4} lg={3} className="todo-app">
+          <TodoList />
+        </Grid>
+        <div className="main_content container_shadow">
+          <Grid item xs>
+            <Pomodoro />
+          </Grid>
+        </div>
+      </Grid>
+    </Container>
   );
 }
 
